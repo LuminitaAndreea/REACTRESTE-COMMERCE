@@ -1,12 +1,15 @@
 import React from 'react'
-import { Card,Button } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 import {IProduct} from './models/product'
+import {Button} from 'react-bootstrap'
 
 interface IProps{
     product:IProduct
+    setEditMode:(editMode:boolean)=>void;
+    setSelectedProducts: (product:IProduct | null)=>void;
 }
 
- const ProductDetails:React.FC<IProps>=({product})=>{
+ const ProductDetails:React.FC<IProps>=({product,setEditMode,setSelectedProducts})=>{
      return (
         <Card fluid>
             <Card.Content>
@@ -18,11 +21,11 @@ interface IProps{
             </Card.Content>
             <Card.Content extra>
                 <div className='ui two buttons'>
-                <Button basic color='green'>
+                <Button className="float-left"  variant="outline-success" onClick={()=>setEditMode(true)}>
                     Edit
                 </Button>
-                <Button basic color='red'>
-                    Delete
+                <Button onClick={()=>setSelectedProducts(null)} className="float-left" >
+                    Cancel
                 </Button>
                 </div>
             </Card.Content>

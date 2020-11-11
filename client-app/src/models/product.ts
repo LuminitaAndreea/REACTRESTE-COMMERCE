@@ -1,11 +1,11 @@
 
 export interface IProduct {
-     productID:string;
+    productID:string;
     productName:string;
     productImg1:string;
     productImg2:string;
-    price:Float32Array;
+    price:string;
     productSize:string;
     description:string;
-    subCategoryID:Int16Array;
+    subCategoryID:string;
 }

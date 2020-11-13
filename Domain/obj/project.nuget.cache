@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "oAJouh6U1/YmoIyloms3N8bLbIT4q6ECdI/nGB+6XrOdN/TIik1BlcDBvH4fHkupqrrNz2W4GVJ0RKWT2p2vIg==",
+  "dgSpecHash": "FbCUah9TTDr53cdW/PFi6d06yTYpljfd1LzxsnNw18PWPH0uyskuuj9q8mAhNDqZWAczIJad+JBoINN259xnRw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lumi\\Desktop\\REACTRESTE-COMMERCE-master\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lumi\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\Lumi\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\Lumi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Lumi\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Lumi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "XRk5bQjqRYHMjpR/iM/UTu/B7x4O5f5yH8UqL4isa87CiAw9CKoELQdK1lOmzrqPHG/Ttf5f1GR3nlQ98Bxngg==",
+  "dgSpecHash": "lu2OWz7GmUpdqwt/43NjzgLa8vLjnPslNBK3DcidPUTkqMMYsgLha+dZ/RUb+aCK5m89aBqKfomzMOLaPixlJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lumi\\Desktop\\REACTRESTE-COMMERCE-master\\Persistance\\Persistance.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lumi\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\Lumi\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\Lumi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Lumi\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Lumi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

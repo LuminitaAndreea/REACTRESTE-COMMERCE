@@ -1,12 +1,15 @@
-import React, {useState,useEffect,Fragment} from 'react';
 import './App.css';
-import axios from 'axios';
-import { Container, List } from 'semantic-ui-react'
 import NavBar from './NavBar';
 import {IProduct} from './models/product'
 import ProductDashboard from './ProductDashboard';
 import { Button } from 'react-bootstrap'
 import CreateProduct from './CreateProduct';
+import agent from './agent';
+import React, { useState, useEffect, Fragment, SyntheticEvent } from 'react';
+import { Container } from 'semantic-ui-react';
+// import LoadingComponent from './LoadingComponent';
+import axios from 'axios'
+
 
 interface IProps{
   openCreateForm:()=>void;
@@ -18,7 +21,7 @@ const App =() => {
   const[selectedProducts,setSelectedProducts]=useState<IProduct | null >(null);
 
   const handleSelectProduct=(id: string)=>{
-    setSelectedProducts(products.filter(a=>a.productID==id)[0])
+    setSelectedProducts(products.filter(a=>a.productID===id)[0])
   }
 
   const[editMode,setEditMode]=useState(false);
@@ -30,10 +33,12 @@ const App =() => {
   }
 
   const handleCreateProduct=(product:IProduct)=>{
+    agent.Products.create(product).then(()=>{
     setProducts([...products,product])
     setSelectedProducts(product);
     setEditMode(false);
-  }
+  })
+}
 
   const handleEditProduct=(product:IProduct)=>{
     setProducts([...products.filter(a=>a.productID!==product.productID),product])
@@ -45,6 +50,19 @@ const App =() => {
     setProducts([...products.filter(a=>a.productID!==productID)])
   }
 
+  // useEffect(() => {
+
+  //   agent.Products.list()
+  //     .then(response => {
+  //       let products: IProduct[] = [];
+  //       response.forEach((product:any) => {
+  //         products.push(product);
+  //       })
+  //       setProducts(products);
+  //     });
+  // }, []);
+
+  
   useEffect(() => {
     axios
     .get<IProduct[]>('https://localhost:44301/api/Products')
@@ -52,6 +70,7 @@ const App =() => {
        setProducts(response.data)
      });
   }, []);
+
 
   return (
   <Fragment> 
@@ -74,5 +93,5 @@ const App =() => {
   </Fragment>
   );
 
-}
+};
 export default App;
